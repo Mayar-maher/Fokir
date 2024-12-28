@@ -1,0 +1,272 @@
+/* ----------------------- nav -----------  */
+.navbar-expand-lg .navbar-nav .nav-link {
+    transition: all 1s;
+    color: white;
+    font-weight: 600;
+}
+.navbar-expand-lg .navbar-nav .nav-link{
+    transition: all 0.3 ease;
+}
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+    color: #FF305B;
+}
+/* --------------- header --------------  */
+#header{
+    background: linear-gradient(rgba(0, 0, 0, 0.778) 0% 100%), url(../images/header.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+.wrapper {
+    display: inline-flex;
+}
+.cursor {
+    animation: blink 1s step-start infinite;
+}
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    25% {
+        width: 25%;
+    }
+    50% {
+        width: 50%;
+    }
+    75% {
+        width: 75%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes erase {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0;
+    }
+}
+.dynamic-text {
+    overflow: hidden;
+    display: inline-block;
+    border-right: 3px solid white;
+    animation: typing 1.5s steps(8) infinite, blink 1s step-end infinite;
+}
+
+/* text switching */
+.dynamic-text:before {
+    content: "";
+    animation: change-text 3s steps(7) infinite;
+}
+
+/* Switch Between Two Texts */
+@keyframes change-text {
+    0%,
+    50% {
+        content: "Developer";
+    }
+    51%,
+    100% {
+        content: "Designer";
+    }
+}
+/* --------------- hello --------------  */
+.line-before{
+    position: relative;
+}
+.line-before::before{
+    content: " ";
+    height: 40px;
+    width: 5px;
+    background-color: #FF305B;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+.line-after{
+    position: relative;
+}
+.line-after::after{
+    content: " ";
+    height: 3px;
+    width: 300px;
+    border-top: 1px dashed rgb(71, 68, 68) ;
+    position: absolute;
+    top: 160px;
+    left: 0;
+}
+.img-container{
+    border: 10px solid black;
+}
+.img-container img{
+    width: 100%;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    
+}
+.hello-img{
+    position: relative;
+    
+}
+.layer{
+    background-color: rgba(51, 49, 49, 0.581);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 20%;
+    left: 20px;
+    text-align: center;
+    transition: all 1s;
+    opacity: 0;
+}
+.layer .social-icon{
+    font-size: 25px;
+    color: white;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hello-img:hover .layer{
+    top: 0%;
+    opacity: 1;
+}
+
+.each-hello-btns{
+    background-color: #FF305B;
+    transition: all 1s ease;
+}
+.each-hello-btns:hover{
+    background-color: rgb(236, 36, 3);
+}
+.overflow-new{
+    overflow: hidden;
+}
+/* ---------------------------- service section ---------------  */
+.line-under1,
+.line-under2{
+    position: relative;
+}
+.line-under1::after{
+    content: " ";
+    height: 10px;
+    width: 100px;
+    background-color: transparent;
+    border-bottom: 1px solid #FF305B;
+    border-top: 1px solid #FF305B;
+    position: absolute;
+    top: 71.5%;
+    left: 45%;
+}
+.line-under2::before{
+    content: " ";
+    height: 1px;
+    width: 200px;
+    background-color: #FF305B;
+    position: absolute;
+    top: 75%;
+    left: 42%;
+}
+
+.each-service{
+    transition: all 1s ease;
+}
+.each-service i{
+    transition: all 1s ease;
+}
+.each-service:hover{
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgb(165, 164, 164);
+}
+.each-service:hover i{
+    transform: scale(1.5);
+}
+/* ----------------------------------- portfolio section -----  */
+/* ------- layer img ----  */
+.img-wrapper {
+    position: relative;
+}
+.img-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 103%;
+    height: 89%;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+.img-wrapper:hover .img-layer {
+    opacity: 1;
+}
+.img-layer i {
+    font-size: 30px; 
+    padding: 10px; 
+    bottom: 0; 
+    right: 0; 
+}
+.img-wrapper img{
+    transition: transform 0.5s ease;
+}
+.img-wrapper:hover img {
+    transform: scale(1.05);
+}
+/* -------- indicators ----  */
+.carousel-indicators button {
+    background-color: black;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+.carousel-indicators button.active {
+    background-color: #FF305B;
+}
+.carousel-indicators button:hover {
+    background-color: #FF305B;
+}
+/* --------------------------------- feedback  ----------------------------------  */
+#feedback .background-color{
+    background: linear-gradient(130deg ,#FF305B 0% 15% , #F1F1F1 15% 100%);
+}
+
+/* ------------------------------------------ our blog ----------------------  */
+.hover-read{
+    color: black;
+    transition: all 0.5s ease;
+}
+.hover-read1:hover{
+    color: #FF305B;
+}
+.hover-read2{
+    color: rgb(118, 117, 117);
+    transition: all 0.5s ease;
+}
+.hover-read2:hover{
+    color: #FF305B;
+}
+/* ----------------------------------------- footer -------------------------------  */
+.hover-social-icon{
+    transition: all 0.5s ease;
+}
+.hover-social-icon:hover{
+    color: #FF305B;
+}
+.hover-word{
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.hover-word:hover{
+    text-decoration: underline ;
+}
